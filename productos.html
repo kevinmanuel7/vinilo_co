@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos — Vinilo &amp; Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="barra-superior">
+      <nav class="nav-cuenta" aria-label="Cuenta de usuario">
+        <ul>
+          <li><a href="index.html">Iniciar sesión</a></li>
+          <li><a href="registro.html">Registrar usuario</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <a href="index.html">
+        <img src="/img/logo.png" class="logo" alt="Vinilo & Co.">
+      </a>
+
+      <ul class="menu-principal">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <a href="carrito.html" class="carrito" aria-label="Ver carrito de compras">
+        🛒 <span class="contador-carrito">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Migas de pan -->
+    <nav aria-label="Ruta de navegación" class="migas-pan">
+      <a href="index.html">Home</a> &gt; <span>Productos</span>
+    </nav>
+
+    <section class="encabezado-pagina">
+      <h1>Nuestros vinilos</h1>
+      <p>Explora nuestra colección de discos de colección, seleccionados género por género.</p>
+    </section>
+
+    <!-- Filtro por categoría -->
+    <section class="filtros-productos">
+      <form class="form-filtro" action="#" method="get">
+        <label for="categoria">Filtrar por género</label>
+        <select id="categoria" name="categoria">
+          <option value="">Todos los géneros</option>
+          <option value="rock">Rock clásico</option>
+          <option value="jazz">Jazz</option>
+          <option value="soul-funk">Soul / Funk</option>
+          <option value="salsa">Salsa</option>
+          <option value="cumbia">Cumbia</option>
+          <option value="electronica">Electrónica</option>
+          <option value="nacional">Nacional / Chileno</option>
+        </select>
+        <button type="submit" class="boton-secundario">Filtrar</button>
+      </form>
+    </section>
+
+    <!-- Listado completo de productos -->
+    <section class="productos-destacados">
+      <ul class="grilla-productos">
+
+        <li>
+          <article class="tarjeta-producto">
+            <a href="detalle-producto.html">
+              <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Abbey+Road" alt="Portada del álbum Abbey Road">
+              <h3>Abbey Road</h3>
+            </a>
+            <p class="atributo">Rock clásico</p>
+            <p class="precio">$12.990</p>
+            <button type="button" class="boton-primario boton-anadir" data-producto="Abbey Road">Añadir</button>
+          </article>
+        </li>
+
+        <li>
+          <article class="tarjeta-producto">
+            <a href="detalle-producto.html">
+              <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Kind+of+Blue" alt="Portada del álbum Kind of Blue">
+              <h3>Kind of Blue</h3>
+            </a>
+            <p class="atributo">Jazz</p>
+            <p class="precio">$14.990</p>
+            <button type="button" class="boton-primario boton-anadir" data-producto="Kind of Blue">Añadir</button>
+          </article>
+        </li>
+
+        <li>
+          <article class="tarjeta-producto">
+            <a href="detalle-producto.html">
+              <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Buena+Vista" alt="Portada del álbum Buena Vista Social Club">
+              <h3>Buena Vista Social Club</h3>
+            </a>
+            <p class="atributo">Son cubano</p>
+            <p class="precio">$11.990</p>
+            <button type="button" class="boton-primario boton-anadir" data-producto="Buena Vista Social Club">Añadir</button>
+          </article>
+        </li>
+
+        <li>
+          <article class="tarjeta-producto">
+            <a href="detalle-producto.html">
+              <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Thriller" alt="Portada del álbum Thriller">
+              <h3>Thriller</h3>
+            </a>
+            <p class="atributo">Pop / Funk</p>
+            <p class="precio">$13.990</p>
+            <button type="button" class="boton-primario boton-anadir" data-producto="Thriller">Añadir</button>
+          </article>
+        </li>
+
+        <li>
+          <article class="tarjeta-producto">
+            <a href="detalle-producto.html">
+              <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Fania+All+Stars" alt="Portada del álbum Fania All Stars">
+              <h3>Fania All Stars — Live</h3>
+            </a>
+            <p class="atributo">Salsa</p>
+            <p class="precio">$10.990</p>
+            <button type="button" class="boton-primario boton-anadir" data-producto="Fania All Stars — Live">Añadir</button>
+          </article>
+        </li>
+
+        <li>
+          <article class="tarjeta-producto">
+            <a href="detalle-producto.html">
+              <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Los+Jaivas" alt="Portada del álbum de Los Jaivas">
+              <h3>Los Jaivas — Alturas</h3>
+            </a>
+            <p class="atributo">Nacional / Chileno</p>
+            <p class="precio">$12.490</p>
+            <button type="button" class="boton-primario boton-anadir" data-producto="Los Jaivas — Alturas">Añadir</button>
+          </article>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="pie-columna">
+      <img src="/img/logo.png" class="logo-footer" alt="Vinilo & Co.">
+      <p>Música de siempre, sonido de verdad.</p>
+    </div>
+
+    <nav class="pie-categorias" aria-label="Categorías de música">
+      <h3>Categorías</h3>
+      <ul>
+        <li><a href="productos.html?categoria=rock">Rock clásico</a></li>
+        <li><a href="productos.html?categoria=jazz">Jazz</a></li>
+        <li><a href="productos.html?categoria=salsa">Salsa</a></li>
+        <li><a href="productos.html?categoria=cumbia">Cumbia</a></li>
+      </ul>
+    </nav>
+
+    <div class="pie-newsletter">
+      <h3>Mantente al tanto</h3>
+      <form action="#" method="post">
+        <label for="email-newsletter">Correo electrónico</label>
+        <input type="email" id="email-newsletter" name="email-newsletter" placeholder="tu@correo.com" required>
+        <button type="submit" class="boton-primario">Suscribirse</button>
+      </form>
+    </div>
+  </footer>
+
+</body>
+</html>
