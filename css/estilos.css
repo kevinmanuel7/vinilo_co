@@ -229,6 +229,129 @@ img {
 }
 
 /* ============================
+   FORMULARIOS (REGISTRO / LOGIN)
+   ============================ */
+
+.seccion-formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta-formulario {
+  background-color: var(--color-blanco);
+  border-radius: var(--radio-borde);
+  padding: 2.5rem;
+  box-shadow: var(--sombra-suave);
+  width: 100%;
+  max-width: 480px;
+}
+
+.tarjeta-formulario h1,
+.tarjeta-formulario h2 {
+  text-align: center;
+}
+
+.subtitulo-formulario {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-primario);
+}
+
+.campo {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-family: var(--fuente-titulos);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radio-borde);
+  border: 1px solid var(--color-acento);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: 2px solid var(--color-secundario);
+}
+
+.campo-invalido {
+  border-color: #B23A2F !important;
+  background-color: #FBEAE8;
+}
+
+.sugerencia-campo {
+  font-size: 0.78rem;
+  color: var(--color-primario);
+  margin-top: 0.3rem;
+}
+
+.mensaje-error {
+  font-size: 0.8rem;
+  color: #B23A2F;
+  margin-top: 0.3rem;
+  min-height: 1rem;
+}
+
+.mensaje-exito {
+  text-align: center;
+  color: #2E7D32;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.campo-doble .campo {
+  flex: 1;
+}
+
+.boton-ancho {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.enlace-secundario {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.enlace-secundario a {
+  color: var(--color-secundario);
+  text-decoration: underline;
+}
+
+.seccion-login {
+  text-align: center;
+}
+
+.login-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+}
+
+.login-titulo {
+  margin-bottom: 1.5rem;
+}
+
+/* ============================
    DETALLE DE PRODUCTO
    ============================ */
 
@@ -325,6 +448,119 @@ img {
   border-radius: var(--radio-borde);
   border: 1px solid var(--color-acento);
   font-family: var(--fuente-texto);
+}
+
+/* ============================
+   NOSOTROS — VALORES
+   ============================ */
+
+.grilla-valores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tarjeta-valor {
+  background-color: var(--color-blanco);
+  border-radius: var(--radio-borde);
+  padding: 1.5rem;
+  box-shadow: var(--sombra-suave);
+  text-align: center;
+}
+
+.tarjeta-valor h3 {
+  color: var(--color-primario);
+}
+
+.descripcion-equipo {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* ============================
+   BLOGS — LISTADO
+   ============================ */
+
+.lista-blogs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.tarjeta-blog {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background-color: var(--color-blanco);
+  border-radius: var(--radio-borde);
+  padding: 1.5rem;
+  box-shadow: var(--sombra-suave);
+}
+
+.tarjeta-blog img {
+  flex: 1 1 280px;
+  border-radius: var(--radio-borde);
+}
+
+.tarjeta-blog-contenido {
+  flex: 2 1 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-blog-contenido h2 {
+  margin-top: 0;
+}
+
+.tarjeta-blog-contenido p {
+  line-height: 1.6;
+  flex: 1;
+}
+
+.tarjeta-blog-contenido .boton-secundario {
+  align-self: flex-start;
+}
+
+/* ============================
+   BLOGS — DETALLE
+   ============================ */
+
+.detalle-blog {
+  max-width: 760px;
+  margin: 0 auto;
+  background-color: var(--color-blanco);
+  border-radius: var(--radio-borde);
+  padding: 2.5rem;
+  box-shadow: var(--sombra-suave);
+}
+
+.detalle-blog-meta {
+  color: var(--color-primario);
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.detalle-blog img {
+  border-radius: var(--radio-borde);
+  margin-bottom: 1.5rem;
+}
+
+.detalle-blog h2 {
+  margin-top: 1.5rem;
+}
+
+.detalle-blog p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.detalle-blog .boton-secundario {
+  margin-top: 1rem;
 }
 
 /* ============================

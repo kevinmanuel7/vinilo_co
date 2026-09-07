@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El resurgimiento del vinilo — Vinilo &amp; Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="barra-superior">
+      <nav class="nav-cuenta" aria-label="Cuenta de usuario">
+        <ul>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="registro.html">Registrar usuario</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <a href="index.html">
+        <img src="/img/logo.png" class="logo" alt="Vinilo & Co.">
+      </a>
+      <ul class="menu-principal">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html" aria-current="page">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <a href="carrito.html" class="carrito" aria-label="Ver carrito de compras">
+        🛒 <span class="contador-carrito">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Migas de pan -->
+    <nav aria-label="Ruta de navegación" class="migas-pan">
+      <a href="index.html">Home</a> &gt;
+      <a href="blogs.html">Blogs</a> &gt;
+      <span>Caso curioso #1</span>
+    </nav>
+
+    <article class="detalle-blog">
+      <h1>Por qué el vinilo nunca murió (y hoy vende más que el CD)</h1>
+      <p class="detalle-blog-meta">Publicado por el equipo de Vinilo &amp; Co.</p>
+
+      <img src="https://placehold.co/800x450/2B2118/F5E6D3?text=Resurgimiento+del+Vinilo" alt="Persona seleccionando un vinilo en una tienda de discos">
+
+      <p>
+        Durante los años 2000, muchos dieron por muerto al vinilo. El CD había ganado la batalla por
+        practicidad, y más tarde el streaming terminaría por reemplazar cualquier soporte físico...
+        o eso se pensaba. Sin embargo, desde 2007 las ventas de vinilo no han dejado de crecer,
+        año tras año, en un fenómeno que la industria musical no esperaba.
+      </p>
+
+      <h2>Un ritual, no solo un formato</h2>
+      <p>
+        A diferencia de dar play a una lista de streaming, poner un vinilo implica un ritual: sacar el
+        disco de su funda, limpiarlo, ubicarlo en el plato y bajar la aguja con cuidado. Ese proceso,
+        lejos de ser una molestia, es parte del atractivo para las nuevas generaciones de coleccionistas,
+        que buscan una experiencia de escucha más consciente y menos automática.
+      </p>
+
+      <h2>El sonido "cálido" del análogo</h2>
+      <p>
+        Muchos audiófilos describen el sonido del vinilo como más "cálido" o "natural" que el digital,
+        debido a cómo se graban y reproducen las ondas de sonido de forma analógica, sin la compresión
+        típica de los formatos digitales. Sea o no perceptible para todos los oídos, esa percepción ha
+        sido clave en el renacimiento del formato.
+      </p>
+
+      <h2>Un mercado que sigue creciendo</h2>
+      <p>
+        Hoy en día, sellos discográficos grandes y pequeños vuelven a prensar álbumes clásicos y lanzan
+        ediciones nuevas directamente en vinilo. Para tiendas como Vinilo &amp; Co., esto significa una
+        oportunidad constante de traer ediciones especiales, remasterizadas y de colección a quienes
+        disfrutan tener la música en sus manos, no solo en una pantalla.
+      </p>
+
+      <a href="blogs.html" class="boton-secundario">&larr; Volver a Blogs</a>
+    </article>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="pie-columna">
+      <img src="/img/logo.png" class="logo-footer" alt="Vinilo & Co.">
+      <p>Música de siempre, sonido de verdad.</p>
+    </div>
+
+    <nav class="pie-categorias" aria-label="Categorías de música">
+      <h3>Categorías</h3>
+      <ul>
+        <li><a href="productos.html?categoria=rock">Rock clásico</a></li>
+        <li><a href="productos.html?categoria=jazz">Jazz</a></li>
+        <li><a href="productos.html?categoria=salsa">Salsa</a></li>
+        <li><a href="productos.html?categoria=cumbia">Cumbia</a></li>
+      </ul>
+    </nav>
+
+    <div class="pie-newsletter">
+      <h3>Mantente al tanto</h3>
+      <form action="#" method="post">
+        <label for="email-newsletter">Correo electrónico</label>
+        <input type="email" id="email-newsletter" name="email-newsletter" placeholder="tu@correo.com" required>
+        <button type="submit" class="boton-primario">Suscribirse</button>
+      </form>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo cuidar tus vinilos — Vinilo &amp; Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="barra-superior">
+      <nav class="nav-cuenta" aria-label="Cuenta de usuario">
+        <ul>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="registro.html">Registrar usuario</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <a href="index.html">
+        <img src="/img/logo.png" class="logo" alt="Vinilo & Co.">
+      </a>
+      <ul class="menu-principal">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html" aria-current="page">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <a href="carrito.html" class="carrito" aria-label="Ver carrito de compras">
+        🛒 <span class="contador-carrito">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Migas de pan -->
+    <nav aria-label="Ruta de navegación" class="migas-pan">
+      <a href="index.html">Home</a> &gt;
+      <a href="blogs.html">Blogs</a> &gt;
+      <span>Caso curioso #2</span>
+    </nav>
+
+    <article class="detalle-blog">
+      <h1>Cómo cuidar tus vinilos para que duren generaciones</h1>
+      <p class="detalle-blog-meta">Publicado por el equipo de Vinilo &amp; Co.</p>
+
+      <img src="https://placehold.co/800x450/8B4513/F5E6D3?text=Cuidado+de+Vinilos" alt="Persona limpiando un disco de vinilo con un cepillo antiestático">
+
+      <p>
+        Un vinilo bien cuidado puede sonar igual de bien después de décadas. El problema no es el paso
+        del tiempo, sino el mal manejo: polvo acumulado, rayones por manipulación descuidada y
+        almacenamiento en malas condiciones son los principales enemigos de tu colección.
+      </p>
+
+      <h2>Manipula el disco por los bordes</h2>
+      <p>
+        Nunca toques la superficie donde va la aguja. Sujeta el vinilo por el borde exterior y por la
+        etiqueta central, tal como se sostiene un CD. La grasa natural de los dedos atrae polvo y puede
+        dañar el surco con el tiempo.
+      </p>
+
+      <h2>Límpialo antes y después de reproducirlo</h2>
+      <p>
+        Un cepillo antiestático de fibra de carbono es la herramienta más básica y efectiva. Pásalo
+        suavemente en el sentido de los surcos antes de poner el disco, y guárdalo limpio después de
+        escucharlo. Para una limpieza más profunda, existen kits específicos con líquido y microfibra.
+      </p>
+
+      <h2>Guárdalos en posición vertical</h2>
+      <p>
+        Almacenar los vinilos apilados horizontalmente, uno sobre otro, puede deformarlos con el
+        tiempo debido al peso. Lo correcto es guardarlos de pie, como libros en un estante, en un
+        lugar fresco y alejado de la luz solar directa.
+      </p>
+
+      <h2>Usa fundas interiores de calidad</h2>
+      <p>
+        Las fundas de papel que traen algunos discos antiguos pueden generar polvo de fricción con el
+        tiempo. Reemplazarlas por fundas interiores de polietileno o papel antiestático es una inversión
+        pequeña que protege tu colección a largo plazo.
+      </p>
+
+      <a href="blogs.html" class="boton-secundario">&larr; Volver a Blogs</a>
+    </article>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="pie-columna">
+      <img src="/img/logo.png" class="logo-footer" alt="Vinilo & Co.">
+      <p>Música de siempre, sonido de verdad.</p>
+    </div>
+
+    <nav class="pie-categorias" aria-label="Categorías de música">
+      <h3>Categorías</h3>
+      <ul>
+        <li><a href="productos.html?categoria=rock">Rock clásico</a></li>
+        <li><a href="productos.html?categoria=jazz">Jazz</a></li>
+        <li><a href="productos.html?categoria=salsa">Salsa</a></li>
+        <li><a href="productos.html?categoria=cumbia">Cumbia</a></li>
+      </ul>
+    </nav>
+
+    <div class="pie-newsletter">
+      <h3>Mantente al tanto</h3>
+      <form action="#" method="post">
+        <label for="email-newsletter">Correo electrónico</label>
+        <input type="email" id="email-newsletter" name="email-newsletter" placeholder="tu@correo.com" required>
+        <button type="submit" class="boton-primario">Suscribirse</button>
+      </form>
+    </div>
+  </footer>
+
+</body>
+</html>

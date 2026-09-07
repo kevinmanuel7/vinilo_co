@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de usuario — Vinilo &amp; Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="barra-superior">
+      <nav class="nav-cuenta" aria-label="Cuenta de usuario">
+        <ul>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="registro.html" aria-current="page">Registrar usuario</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <a href="index.html">
+        <img src="/img/logo.png" class="logo" alt="Vinilo & Co.">
+      </a>
+
+      <ul class="menu-principal">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <a href="carrito.html" class="carrito" aria-label="Ver carrito de compras">
+        🛒 <span class="contador-carrito">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="seccion-formulario">
+      <form id="formulario-registro" class="tarjeta-formulario" novalidate>
+        <h1>Registro de usuario</h1>
+        <p class="subtitulo-formulario">Crea tu cuenta para comprar y seguir tus pedidos.</p>
+
+        <div class="campo">
+          <label for="run">RUN</label>
+          <input type="text" id="run" name="run" placeholder="Ej: 19011022K" maxlength="9" required>
+          <span class="mensaje-error" id="error-run" aria-live="polite"></span>
+        </div>
+
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" maxlength="50" required>
+          <span class="mensaje-error" id="error-nombre" aria-live="polite"></span>
+        </div>
+
+        <div class="campo">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" id="apellidos" name="apellidos" maxlength="100" required>
+          <span class="mensaje-error" id="error-apellidos" aria-live="polite"></span>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" maxlength="100" placeholder="tu@duoc.cl" required>
+          <span class="sugerencia-campo">Solo se aceptan correos @duoc.cl, @profesor.duoc.cl o @gmail.com</span>
+          <span class="mensaje-error" id="error-correo" aria-live="polite"></span>
+        </div>
+
+        <div class="campo">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" name="contrasena" minlength="4" maxlength="10" required>
+          <span class="sugerencia-campo">Entre 4 y 10 caracteres</span>
+          <span class="mensaje-error" id="error-contrasena" aria-live="polite"></span>
+        </div>
+
+        <div class="campo">
+          <label for="confirmar-contrasena">Confirmar contraseña</label>
+          <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" minlength="4" maxlength="10" required>
+          <span class="mensaje-error" id="error-confirmar-contrasena" aria-live="polite"></span>
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Teléfono (opcional)</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
+          <span class="mensaje-error" id="error-telefono" aria-live="polite"></span>
+        </div>
+
+        <div class="campo">
+          <label for="fecha-nacimiento">Fecha de nacimiento (opcional)</label>
+          <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+        </div>
+
+        <div class="campo-doble">
+          <div class="campo">
+            <label for="region">Región</label>
+            <select id="region" name="region" required>
+              <option value="">-- Seleccione la región --</option>
+            </select>
+            <span class="mensaje-error" id="error-region" aria-live="polite"></span>
+          </div>
+
+          <div class="campo">
+            <label for="comuna">Comuna</label>
+            <select id="comuna" name="comuna" required disabled>
+              <option value="">-- Seleccione la comuna --</option>
+            </select>
+            <span class="mensaje-error" id="error-comuna" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" name="direccion" maxlength="300" required>
+          <span class="mensaje-error" id="error-direccion" aria-live="polite"></span>
+        </div>
+
+        <button type="submit" class="boton-primario boton-ancho">Registrar</button>
+
+        <p class="mensaje-exito" id="mensaje-exito-registro" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="pie-columna">
+      <img src="/img/logo.png" class="logo-footer" alt="Vinilo & Co.">
+      <p>Música de siempre, sonido de verdad.</p>
+    </div>
+
+    <nav class="pie-categorias" aria-label="Categorías de música">
+      <h3>Categorías</h3>
+      <ul>
+        <li><a href="productos.html?categoria=rock">Rock clásico</a></li>
+        <li><a href="productos.html?categoria=jazz">Jazz</a></li>
+        <li><a href="productos.html?categoria=salsa">Salsa</a></li>
+        <li><a href="productos.html?categoria=cumbia">Cumbia</a></li>
+      </ul>
+    </nav>
+
+    <div class="pie-newsletter">
+      <h3>Mantente al tanto</h3>
+      <form action="#" method="post">
+        <label for="email-newsletter">Correo electrónico</label>
+        <input type="email" id="email-newsletter" name="email-newsletter" placeholder="tu@correo.com" required>
+        <button type="submit" class="boton-primario">Suscribirse</button>
+      </form>
+    </div>
+  </footer>
+
+  <script src="js/regiones-comunas.js"></script>
+  <script src="js/validaciones.js"></script>
+</body>
+</html>

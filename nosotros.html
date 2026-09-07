@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros — Vinilo &amp; Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="barra-superior">
+      <nav class="nav-cuenta" aria-label="Cuenta de usuario">
+        <ul>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="registro.html">Registrar usuario</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <a href="index.html">
+        <img src="/img/logo.png" class="logo" alt="Vinilo & Co.">
+      </a>
+      <ul class="menu-principal">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <a href="carrito.html" class="carrito" aria-label="Ver carrito de compras">
+        🛒 <span class="contador-carrito">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Migas de pan -->
+    <nav aria-label="Ruta de navegación" class="migas-pan">
+      <a href="index.html">Home</a> &gt; <span>Nosotros</span>
+    </nav>
+
+    <!-- Historia de la tienda -->
+    <section class="hero">
+      <div class="hero-texto">
+        <h1>Sobre Vinilo &amp; Co.</h1>
+        <p>
+          Nacimos de una obsesión compartida: el sonido cálido del vinilo y el ritual de sacar
+          un disco de su funda, ponerlo en el plato y escuchar un álbum completo, de principio a fin.
+          Desde 2024, buscamos y seleccionamos ediciones de calidad —nuevas y de colección— para
+          coleccionistas, melómanos y quienes recién están descubriendo la música en su formato físico.
+        </p>
+        <p>
+          Trabajamos directamente con distribuidoras y coleccionistas para asegurar que cada disco
+          que llega a tu casa esté en las mejores condiciones posibles.
+        </p>
+      </div>
+      <div class="hero-imagen">
+        <img src="https://placehold.co/560x420/8B4513/F5E6D3?text=Nuestra+Historia" alt="Interior de una tienda de discos vintage con estanterías llenas de vinilos">
+      </div>
+    </section>
+
+    <!-- Misión y valores -->
+    <section class="productos-destacados">
+      <h2>Lo que nos mueve</h2>
+
+      <ul class="grilla-valores">
+        <li class="tarjeta-valor">
+          <h3>Autenticidad</h3>
+          <p>Cada vinilo es verificado antes de publicarse: sin rayones que afecten la reproducción y con su carátula original.</p>
+        </li>
+        <li class="tarjeta-valor">
+          <h3>Curaduría</h3>
+          <p>No vendemos todo lo que existe, sino lo que realmente vale la pena tener en una colección.</p>
+        </li>
+        <li class="tarjeta-valor">
+          <h3>Comunidad</h3>
+          <p>Creemos en compartir el gusto por la música física con otros coleccionistas, no solo en vender discos.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Equipo desarrollador -->
+    <section class="productos-destacados">
+      <h2>El equipo detrás del proyecto</h2>
+      <p class="descripcion-equipo">
+        Vinilo &amp; Co. es un proyecto desarrollado como parte de la asignatura Desarrollo Fullstack II (DSY1104) de Duoc UC.
+      </p>
+
+      <ul class="grilla-productos">
+        <li>
+          <article class="tarjeta-producto">
+            <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Integrante+1" alt="Foto de perfil del integrante 1">
+            <h3>[Nombre integrante 1]</h3>
+            <p class="atributo">Desarrollo Frontend</p>
+          </article>
+        </li>
+
+        <li>
+          <article class="tarjeta-producto">
+            <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Integrante+2" alt="Foto de perfil del integrante 2">
+            <h3>[Nombre integrante 2]</h3>
+            <p class="atributo">Desarrollo Frontend</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="pie-columna">
+      <img src="/img/logo.png" class="logo-footer" alt="Vinilo & Co.">
+      <p>Música de siempre, sonido de verdad.</p>
+    </div>
+
+    <nav class="pie-categorias" aria-label="Categorías de música">
+      <h3>Categorías</h3>
+      <ul>
+        <li><a href="productos.html?categoria=rock">Rock clásico</a></li>
+        <li><a href="productos.html?categoria=jazz">Jazz</a></li>
+        <li><a href="productos.html?categoria=salsa">Salsa</a></li>
+        <li><a href="productos.html?categoria=cumbia">Cumbia</a></li>
+      </ul>
+    </nav>
+
+    <div class="pie-newsletter">
+      <h3>Mantente al tanto</h3>
+      <form action="#" method="post">
+        <label for="email-newsletter">Correo electrónico</label>
+        <input type="email" id="email-newsletter" name="email-newsletter" placeholder="tu@correo.com" required>
+        <button type="submit" class="boton-primario">Suscribirse</button>
+      </form>
+    </div>
+  </footer>
+
+</body>
+</html>
