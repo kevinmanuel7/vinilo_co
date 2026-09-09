@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
 
   <header class="cabecera">
@@ -50,14 +51,52 @@
     <section class="detalle-producto">
 
       <div class="detalle-imagenes">
-        <img class="imagen-principal" src="img/youngamericans-portada.jpg" alt="Portada del álbum Young Americans, vista frontal">
 
+        <div class="visor-imagen">
+          <button class="flecha flecha-izquierda" type="button" aria-label="Imagen anterior">
+            &#10094;
+          </button>
+      
+          <img 
+            class="imagen-principal" 
+            id="imagenPrincipal"
+            src="img/youngamericans-portada.jpg" 
+            alt="Portada del álbum Young Americans"
+          >
+      
+          <button class="flecha flecha-derecha" type="button" aria-label="Imagen siguiente">
+            &#10095;
+          </button>
+        </div>
+      
         <ul class="miniaturas">
-          <li><img src="img/youngamericans-portada.jpg" alt="Miniatura: portada frontal de Young Americans"></li>
-          <li><img src="img/youngamericans-partetrasera.jpg" alt="Miniatura: contraportada de Young Americans"></li>
-          <li><img src="img/youngamericans-vinyl.jpg" alt="Miniatura: disco de vinilo de Young Americans"></li>
+          <li>
+            <img 
+              src="img/youngamericans-portada.jpg" 
+              alt="Portada frontal de Young Americans"
+              class="miniatura activa"
+            >
+          </li>
+      
+          <li>
+            <img 
+              src="img/youngamericans-partetrasera.jpg" 
+              alt="Contraportada de Young Americans"
+              class="miniatura"
+            >
+          </li>
+      
+          <li>
+            <img 
+              src="img/youngamericans-vinyl.jpg" 
+              alt="Disco de vinilo de Young Americans"
+              class="miniatura"
+            >
+          </li>
         </ul>
+      
       </div>
+      
 
       <div class="detalle-info">
         <h1>Young Americans</h1>
@@ -173,6 +212,6 @@
       </form>
     </div>
   </footer>
-
+  <script src="js/galeria.js"></script>
 </body>
 </html>

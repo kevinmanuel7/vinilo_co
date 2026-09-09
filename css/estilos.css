@@ -789,3 +789,147 @@ img {
 .menu-principal .dropdown:hover .dropdown-menu {
   display: block;
 }
+
+/* =========================================
+   GALERÍA DE IMÁGENES DEL PRODUCTO
+   ========================================= */
+
+   .detalle-imagenes {
+    width: 100%;
+  }
+  
+  .visor-imagen {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .imagen-principal {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  
+  /* Flechas */
+  
+  .flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  
+    width: 45px;
+    height: 45px;
+  
+    border: none;
+    border-radius: 50%;
+  
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+  
+    font-size: 22px;
+    cursor: pointer;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .flecha:hover {
+    background-color: #d66a1f;
+    transform: translateY(-50%) scale(1.08);
+  }
+  
+  .flecha-izquierda {
+    left: 12px;
+  }
+  
+  .flecha-derecha {
+    right: 12px;
+  }
+  
+  
+  /* Miniaturas */
+  
+  .miniaturas {
+    display: flex;
+    gap: 10px;
+  
+    margin-top: 15px;
+    padding: 0;
+  
+    list-style: none;
+  
+    overflow-x: auto;
+  }
+  
+  .miniaturas li {
+    flex-shrink: 0;
+  }
+  
+  .miniatura {
+    width: 80px;
+    height: 80px;
+  
+    object-fit: cover;
+  
+    border: 2px solid transparent;
+    border-radius: 5px;
+  
+    cursor: pointer;
+  
+    opacity: 0.7;
+  
+    transition: opacity 0.2s, border-color 0.2s, transform 0.2s;
+  }
+  
+  .miniatura:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  .miniatura.activa {
+    opacity: 1;
+    border-color: #d66a1f;
+  }
+  
+  
+  /* =========================================
+     CELULAR
+     ========================================= */
+  
+  @media (max-width: 768px) {
+  
+    .imagen-principal {
+      height: 400px;
+    }
+  
+    .flecha {
+      width: 38px;
+      height: 38px;
+      font-size: 18px;
+    }
+  
+    .flecha-izquierda {
+      left: 8px;
+    }
+  
+    .flecha-derecha {
+      right: 8px;
+    }
+  
+    .miniatura {
+      width: 65px;
+      height: 65px;
+    }
+  }
+  
