@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinilo & Co. - Tornamesas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="barra-superior">
+      <nav class="nav-cuenta" aria-label="Cuenta de usuario">
+        <ul>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="registro.html">Registrar usuario</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <a href="index.html">
+        <img src="img/logo.png" class="logo" alt="Vinilo & Co.">
+      </a>
+      <ul class="menu-principal">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="productos.html">Productos ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="productos.html">Vinilos</a></li>
+            <li><a href="tornamesas.html">Tornamesas</a></li>
+            <li><a href="instrumentos.html">Instrumentos</a></li>
+          </ul>
+        </li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="seccion-catalogo">
+      <h2>Tornamesas</h2>
+      <ul class="grilla-productos">
+        <!-- Tornamesa 1 -->
+        <li>
+          <article class="tarjeta-producto">
+            <a href="detalle-tornamesa-1.html">
+              <img src="img/LP60X-BK.jpg" alt="Tornamesa Audio-Technica">
+              <h3>Tornamesa Belt Drive Audio-Technica AT-LP60X-BK</h3>
+            </a>            
+            <p class="precio">$179.990</p>
+            <button type="button" class="boton-primario boton-anadir" data-producto="Tornamesa Belt Drive Audio-Technica AT-LP60X-BK" data-precio="179900">Añadir</button>
+          </article>
+        </li>
+
+        <!-- Tornamesa 2 -->
+        <li>
+          <article class="tarjeta-producto">
+            <a href="detalle-tornamesa-2.html">
+              <img src="img/LP3XBT-WH.jpg" alt="Tornamesa Audio-Technica LP3XBT-WH">
+              <h3>Tornamesa Belt-Drive Audio-Technica AT-LP3XBT-WH -Blanca</h3>
+            </a>            
+            <p class="precio">$349.990</p>
+            <button type="button" class="boton-primario boton-anadir" data-producto="Tornamesa Belt-Drive Audio-Technica AT-LP3XBT-WH -Blanca" data-precio="349990">Añadir</button>
+          </article>
+        </li>
+
+        <!-- Tornamesa 3 -->
+        <li>
+          <article class="tarjeta-producto">
+            <a href="detalle-tornamesa-3.html">
+              <img src="img/LP70X-BZ - Negro:Bronce.jpg" alt="Tornamesa Belt-Drive Audio-Technica AT-LP70X-BZ - Negro/Bronce">
+              <h3>Tornamesa Belt-Drive Audio-Technica AT-LP70X-BZ - Negro/Bronce</h3>
+            </a>            
+            <p class="precio">$239.990</p>
+            <button type="button" class="boton-primario boton-anadir" data-producto="Tornamesa Belt-Drive Audio-Technica AT-LP70X-BZ - Negro/Bronce" data-precio="239990">Añadir</button>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>

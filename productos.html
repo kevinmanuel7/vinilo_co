@@ -22,20 +22,22 @@
 
     <nav class="nav-principal" aria-label="Navegación principal">
       <a href="index.html">
-        <img src="/img/logo.png" class="logo" alt="Vinilo & Co.">
+        <img src="img/logo.png" class="logo" alt="Vinilo & Co.">
       </a>
-
       <ul class="menu-principal">
         <li><a href="index.html">Home</a></li>
-        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li class="dropdown">
+          <a href="productos.html">Productos ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="productos.html">Vinilos</a></li>
+            <li><a href="tornamesas.html">Tornamesas</a></li>
+            <li><a href="instrumentos.html">Instrumentos</a></li>
+          </ul>
+        </li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
-
-      <a href="carrito.html" class="carrito" aria-label="Ver carrito de compras">
-        🛒 <span class="contador-carrito">0</span>
-      </a>
     </nav>
   </header>
 
@@ -191,6 +193,8 @@
             <button type="button" class="boton-primario boton-anadir" data-producto="Led Zeppelin" data-precio="13990">Añadir</button>
           </article>
         </li>
+
+
 
 
 

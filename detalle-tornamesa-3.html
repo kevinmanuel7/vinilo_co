@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinilo & Co. - Detalle de Tornamesa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="barra-superior">
+          <nav class="nav-cuenta" aria-label="Cuenta de usuario">
+            <ul>
+              <li><a href="index.html">Iniciar sesión</a></li>
+              <li><a href="registro.html">Registrar usuario</a></li>
+            </ul>
+          </nav>
+        </div>
+    
+        <nav class="nav-principal" aria-label="Navegación principal">
+          <a href="index.html">
+            <img src="img/logo.png" class="logo" alt="Vinilo & Co.">
+          </a>
+          <ul class="menu-principal">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="productos.html">Productos ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="productos.html">Vinilos</a></li>
+                <li><a href="tornamesas.html">Tornamesas</a></li>
+                <li><a href="instrumentos.html">Instrumentos</a></li>
+              </ul>
+            </li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+    </header>
+
+  <main>
+    <section class="detalle-producto">
+      
+      <!-- Columna de imágenes -->
+      <div class="detalle-imagenes">
+        <img src="img/LP70X-BZ - Negro:Bronce.jpg" alt="Audio-Technica AT-LP70X-BZ - Negro/Bronce">
+
+        <div class="miniaturas">
+            <img src="img/LP70X-BZ - Negro:Bronce.jpg" alt="Vista 1">
+            <img src="img/LP70X-BZ - Negro:Bronce (2).jpg" alt="Vista 2">
+            <img src="img/LP70X-BZ - Negro:Bronce (3).jpg" alt="Vista 3">
+          </div>
+
+      </div>
+
+      <!-- Columna de información -->
+      <div class="detalle-info">
+        <h1>Tornamesa Belt-Drive Audio-Technica AT-LP70X-BZ - Negro/Bronce</h1>
+        <p class="detalle-precio">239.990</p>
+        
+        <p class="detalle-descripcion">
+            Para los audiófilos en Chile que desean una inmersión auténtica en el sonido analógico del vinilo sin complicaciones, la Tornamesa Belt-Drive Audio-Technica AT-LP70X - Negro/Bronce es el portal perfecto al mundo de la alta fidelidad. Este giradiscos está diseñado para ofrecerte una experiencia auditiva pura y envolvente, desde que seleccionas tu álbum hasta que la aguja toca el surco.
+        </p>
+
+        <dl class="detalle-especificaciones">
+          <div>
+            <dt>Bluetooth:</dt>
+            <dd>No</dd>
+          </div>
+          <div>
+            <dt>Color</dt>
+            <dd>Negro/Bronce</dd>
+          </div>
+          <div>
+            <dt>Estado</dt>
+            <dd>Nuevo, sellado</dd>
+          </div>
+        </dl>
+
+        <form class="form-cantidad" action="#" method="post">
+          <label for="cantidad">Cantidad</label>
+          <select id="cantidad" name="cantidad">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+
+          <button type="submit" class="boton-primario boton-anadir-carrito" data-producto="Audio-Technica AT-LP70X-BZ - Negro/Bronce" data-precio="239990">
+            Añadir al carrito
+          </button>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

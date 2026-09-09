@@ -752,3 +752,40 @@ img {
     text-align: center;
   }
 }
+
+/* Estilos para el menú desplegable (Dropdown) */
+.menu-principal {
+  position: relative;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-principal .dropdown {
+  position: relative;
+}
+
+/* Ocultar el submenú por defecto */
+.menu-principal .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2b1d12; /* Ajusta según el color de tu barra */
+  list-style: none;
+  padding: 10px 0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+.menu-principal .dropdown-menu li a {
+  display: block;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+/* Mostrar el submenú al pasar el cursor */
+.menu-principal .dropdown:hover .dropdown-menu {
+  display: block;
+}
