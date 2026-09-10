@@ -14,7 +14,7 @@
     <div class="barra-superior">
       <nav class="nav-cuenta" aria-label="Cuenta de usuario">
         <ul>
-          <li><a href="index.html">Iniciar sesión</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
           <li><a href="registro.html">Registrar usuario</a></li>
         </ul>
       </nav>
@@ -24,17 +24,23 @@
       <a href="index.html">
         <img src="/img/logo.png" class="logo" alt="Vinilo & Co.">
       </a>
-        <ul class="menu-principal">
-        <li><a href="index.html">Home</a></li>
-        
+      <ul class="menu-principal">
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li class="dropdown">
-            <a href="productos.html">Productos ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="productos.html">Vinilos</a></li>
-              <li><a href="tornamesas.html">Tornamesas</a></li>
-              <li><a href="instrumentos.html">Instrumentos</a></li>
-            </ul>
-          </li>
+          <a href="productos.html">Productos</a>
+          <ul class="dropdown-menu">
+            <li><a href="productos.html">Ver todos</a></li>
+            <li class="dropdown-submenu">
+              <a href="vinilos.html">Vinilos</a>
+              <ul class="dropdown-menu" id="submenu-vinilos"></ul>
+            </li>
+            <li><a href="tornamesas.html">Tornamesas</a></li>
+            <li class="dropdown-submenu">
+              <a href="instrumentos.html">Instrumentos</a>
+              <ul class="dropdown-menu" id="submenu-instrumentos"></ul>
+            </li>
+          </ul>
+        </li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -72,47 +78,7 @@
     <section class="productos-destacados">
       <h2>Nuestros discos destacados</h2>
 
-      <ul class="grilla-productos">
-        <li>
-          <article class="tarjeta-producto">
-            <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Abbey+Road" alt="Portada del álbum Abbey Road">
-            <h3>Abbey Road</h3>
-            <p class="atributo">Rock clásico</p>
-            <p class="precio">$12.990</p>
-            <a href="detalle-producto.html" class="boton-secundario">Ver más</a>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Kind+of+Blue" alt="Portada del álbum Kind of Blue">
-            <h3>Kind of Blue</h3>
-            <p class="atributo">Jazz</p>
-            <p class="precio">$14.990</p>
-            <a href="detalle-producto.html" class="boton-secundario">Ver más</a>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Buena+Vista" alt="Portada del álbum Buena Vista Social Club">
-            <h3>Buena Vista Social Club</h3>
-            <p class="atributo">Son cubano</p>
-            <p class="precio">$11.990</p>
-            <a href="detalle-producto.html" class="boton-secundario">Ver más</a>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Thriller" alt="Portada del álbum Thriller">
-            <h3>Thriller</h3>
-            <p class="atributo">Pop / Funk</p>
-            <p class="precio">$13.990</p>
-            <a href="detalle-producto.html" class="boton-secundario">Ver más</a>
-          </article>
-        </li>
-      </ul>
+      <ul class="grilla-productos" id="grilla-destacados-home"></ul>
     </section>
   </main>
 
@@ -140,7 +106,9 @@
         <button type="submit" class="boton-primario">Suscribirse</button>
       </form>
     </div>
-  </footer>
-
+  </footer>  <script src="js/productos-data.js"></script>
+  <script src="js/nav-categorias.js"></script>
+  <script src="js/home-destacados.js"></script>
+  <script src="js/carrito.js"></script>
 </body>
 </html>

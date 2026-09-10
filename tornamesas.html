@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vinilo & Co. - Tornamesas</title>
+  <title>Tornamesas — Vinilo &amp; Co.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -21,67 +22,91 @@
 
     <nav class="nav-principal" aria-label="Navegación principal">
       <a href="index.html">
-        <img src="img/logo.png" class="logo" alt="Vinilo & Co.">
+        <img src="/img/logo.png" class="logo" alt="Vinilo & Co.">
       </a>
       <ul class="menu-principal">
         <li><a href="index.html">Home</a></li>
         <li class="dropdown">
-          <a href="productos.html">Productos ▾</a>
+          <a href="productos.html">Productos</a>
           <ul class="dropdown-menu">
-            <li><a href="productos.html">Vinilos</a></li>
+            <li><a href="productos.html">Ver todos</a></li>
+            <li class="dropdown-submenu">
+              <a href="vinilos.html">Vinilos</a>
+              <ul class="dropdown-menu" id="submenu-vinilos"></ul>
+            </li>
             <li><a href="tornamesas.html">Tornamesas</a></li>
-            <li><a href="instrumentos.html">Instrumentos</a></li>
+            <li class="dropdown-submenu">
+              <a href="instrumentos.html">Instrumentos</a>
+              <ul class="dropdown-menu" id="submenu-instrumentos"></ul>
+            </li>
           </ul>
         </li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
+
+      <a href="carrito.html" class="carrito" aria-label="Ver carrito de compras">
+        🛒 <span class="contador-carrito">0</span>
+      </a>
     </nav>
   </header>
 
   <main>
-    <section class="seccion-catalogo">
-      <h2>Tornamesas</h2>
-      <ul class="grilla-productos">
-        <!-- Tornamesa 1 -->
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-tornamesa-1.html">
-              <img src="img/LP60X-BK.jpg" alt="Tornamesa Audio-Technica">
-              <h3>Tornamesa Belt Drive Audio-Technica AT-LP60X-BK</h3>
-            </a>            
-            <p class="precio">$179.990</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Tornamesa Belt Drive Audio-Technica AT-LP60X-BK" data-precio="179900">Añadir</button>
-          </article>
-        </li>
+    <!-- Migas de pan -->
+    <nav aria-label="Ruta de navegación" class="migas-pan">
+      <a href="index.html">Home</a> &gt;
+      <a href="productos.html">Productos</a> &gt;
+      <span>Tornamesas</span>
+    </nav>
 
-        <!-- Tornamesa 2 -->
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-tornamesa-2.html">
-              <img src="img/LP3XBT-WH.jpg" alt="Tornamesa Audio-Technica LP3XBT-WH">
-              <h3>Tornamesa Belt-Drive Audio-Technica AT-LP3XBT-WH -Blanca</h3>
-            </a>            
-            <p class="precio">$349.990</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Tornamesa Belt-Drive Audio-Technica AT-LP3XBT-WH -Blanca" data-precio="349990">Añadir</button>
-          </article>
-        </li>
+    <section class="encabezado-pagina">
+      <h1>Tornamesas</h1>
+      <p>Desde equipos para principiantes hasta modelos profesionales para audiófilos y DJs.</p>
+    </section>
 
-        <!-- Tornamesa 3 -->
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-tornamesa-3.html">
-              <img src="img/LP70X-BZ - Negro:Bronce.jpg" alt="Tornamesa Belt-Drive Audio-Technica AT-LP70X-BZ - Negro/Bronce">
-              <h3>Tornamesa Belt-Drive Audio-Technica AT-LP70X-BZ - Negro/Bronce</h3>
-            </a>            
-            <p class="precio">$239.990</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Tornamesa Belt-Drive Audio-Technica AT-LP70X-BZ - Negro/Bronce" data-precio="239990">Añadir</button>
-          </article>
-        </li>
-      </ul>
+    <!-- Filtro por tipo (las opciones se generan solas desde los datos) -->
+    <section class="filtros-productos">
+      <form class="form-filtro" onsubmit="return false;">
+        <label for="filtro-subcategoria">Filtrar por tipo</label>
+        <select id="filtro-subcategoria" name="tipo">
+          <option value="">Todos los tipos</option>
+        </select>
+      </form>
+    </section>
+
+    <section class="productos-destacados">
+      <ul class="grilla-productos" id="grilla-productos-categoria" data-categoria="tornamesa" data-parametro-filtro="tipo"></ul>
     </section>
   </main>
 
+  <footer class="pie-pagina">
+    <div class="pie-columna">
+      <img src="/img/logo.png" class="logo-footer" alt="Vinilo & Co.">
+      <p>Música de siempre, sonido de verdad.</p>
+    </div>
+
+    <nav class="pie-categorias" aria-label="Categorías de música">
+      <h3>Categorías</h3>
+      <ul>
+        <li><a href="productos.html?categoria=rock">Rock clásico</a></li>
+        <li><a href="productos.html?categoria=jazz">Jazz</a></li>
+        <li><a href="productos.html?categoria=salsa">Salsa</a></li>
+        <li><a href="productos.html?categoria=cumbia">Cumbia</a></li>
+      </ul>
+    </nav>
+
+    <div class="pie-newsletter">
+      <h3>Mantente al tanto</h3>
+      <form action="#" method="post">
+        <label for="email-newsletter">Correo electrónico</label>
+        <input type="email" id="email-newsletter" name="email-newsletter" placeholder="tu@correo.com" required>
+        <button type="submit" class="boton-primario">Suscribirse</button>
+      </form>
+    </div>
+  </footer>  <script src="js/productos-data.js"></script>
+  <script src="js/nav-categorias.js"></script>
+  <script src="js/listado-categoria.js"></script>
+  <script src="js/carrito.js"></script>
 </body>
 </html>

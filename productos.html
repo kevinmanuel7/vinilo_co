@@ -14,7 +14,7 @@
     <div class="barra-superior">
       <nav class="nav-cuenta" aria-label="Cuenta de usuario">
         <ul>
-          <li><a href="index.html">Iniciar sesión</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
           <li><a href="registro.html">Registrar usuario</a></li>
         </ul>
       </nav>
@@ -22,22 +22,33 @@
 
     <nav class="nav-principal" aria-label="Navegación principal">
       <a href="index.html">
-        <img src="img/logo.png" class="logo" alt="Vinilo & Co.">
+        <img src="/img/logo.png" class="logo" alt="Vinilo & Co.">
       </a>
       <ul class="menu-principal">
         <li><a href="index.html">Home</a></li>
         <li class="dropdown">
-          <a href="productos.html">Productos ▾</a>
+          <a href="productos.html">Productos</a>
           <ul class="dropdown-menu">
-            <li><a href="productos.html">Vinilos</a></li>
+            <li><a href="productos.html">Ver todos</a></li>
+            <li class="dropdown-submenu">
+              <a href="vinilos.html">Vinilos</a>
+              <ul class="dropdown-menu" id="submenu-vinilos"></ul>
+            </li>
             <li><a href="tornamesas.html">Tornamesas</a></li>
-            <li><a href="instrumentos.html">Instrumentos</a></li>
+            <li class="dropdown-submenu">
+              <a href="instrumentos.html">Instrumentos</a>
+              <ul class="dropdown-menu" id="submenu-instrumentos"></ul>
+            </li>
           </ul>
         </li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
+
+      <a href="carrito.html" class="carrito" aria-label="Ver carrito de compras">
+        🛒 <span class="contador-carrito">0</span>
+      </a>
     </nav>
   </header>
 
@@ -48,157 +59,12 @@
     </nav>
 
     <section class="encabezado-pagina">
-      <h1>Nuestros vinilos</h1>
-      <p>Explora nuestra colección de discos de colección, seleccionados género por género.</p>
+      <h1>Todos los productos</h1>
+      <p>Vinilos, tornamesas e instrumentos, todo en un solo lugar.</p>
     </section>
 
-    <!-- Filtro por categoría -->
-    <section class="filtros-productos">
-      <form class="form-filtro" action="#" method="get">
-        <label for="categoria">Filtrar por género</label>
-        <select id="categoria" name="categoria">
-          <option value="">Todos los géneros</option>
-          <option value="rock">Rock clásico</option>
-          <option value="jazz">Jazz</option>
-          <option value="soul-funk">Soul / Funk</option>
-          <option value="salsa">Salsa</option>
-          <option value="cumbia">Cumbia</option>
-          <option value="electronica">Electrónica</option>
-          <option value="nacional">Nacional / Chileno</option>
-        </select>
-        <button type="submit" class="boton-secundario">Filtrar</button>
-      </form>
-    </section>
-
-    <!-- Listado completo de productos -->
     <section class="productos-destacados">
-      <ul class="grilla-productos">
-
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-producto.html">
-              <img src="img/The_Beatles_Abbey_Road_album_cover.jpg" alt="Portada del álbum Abbey Road">
-              <h3>Abbey Road</h3>
-            </a>
-            <p class="atributo">Rock clásico</p>
-            <p class="precio">$12.990</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Abbey Road">Añadir</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-youngamerican.html">
-              <img src="img/youngamericans-portada.jpg" alt="Portada del Young Americans">
-              <h3>Young Americans</h3>
-            </a>
-            <p class="atributo">Soul</p>
-            <p class="precio">$14.500</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Young Americans">Añadir</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-blizzardofozz.html">
-              <img src="img/blizzardofozz-frontal.jpg" alt="Portada del álbum Blizzard Of Ozz">
-              <h3>Blizzard Of Ozz</h3>
-            </a>
-            <p class="atributo">Heavy Metal</p>
-            <p class="precio">$11.990</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Buena Vista Social Club">Añadir</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-foreveryoung.html">
-              <img src="img/foreveryoung-portada.jpg" alt="Portada del álbum Forever Young">
-              <h3>Forever Young</h3>
-            </a>
-            <p class="atributo">Synth-pop</p>
-            <p class="precio">$13.490</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Forever Young">Añadir</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-toto.html">
-              <img src="img/toto-portada.jpg" alt="Portada del álbum Toto">
-              <h3>Toto</h3>
-            </a>
-            <p class="atributo">Rock / Pop Rock</p>
-            <p class="precio">$13.990</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Toto" data-precio="13990">Añadir</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-signos.html">
-              <img src="img/signos-portada.jpg" alt="Portada del álbum Signos de Soda Stereo">
-              <h3>Signos</h3>
-            </a>
-            <p class="atributo">Rock en español / New Wave</p>
-            <p class="precio">$14.990</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Signos" data-precio="14990">Añadir</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-infame.html">
-              <img src="img/infameportada.jpg" alt="Portada del álbum Infame de Babasónicos">
-              <h3>Infame</h3>
-            </a>
-            <p class="atributo">Rock alternativo</p>
-            <p class="precio">$13.990</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Infame" data-precio="13990">Añadir</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-onenightstand.html">
-              <img src="img/onenightstand-portada.jpg" alt="Portada del álbum One Night Stand de Sam Cooke">
-              <h3>One Night Stand!</h3>
-            </a>
-            <p class="atributo">Soul / R&B</p>
-            <p class="precio">$14.500</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="One Night Stand" data-precio="14500">Añadir</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-taketen.html">
-              <img src="img/taketenportada.jpg" alt="Portada del álbum Take Ten de Paul Desmond">
-              <h3>Take Ten</h3>
-            </a>
-            <p class="atributo">Cool Jazz</p>
-            <p class="precio">$15.990</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Take Ten" data-precio="15990">Añadir</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-ledzeppelin.html">
-              <img src="img/ledzeppelin-portada.jpg" alt="Portada del álbum Led Zeppelin de Led Zeppelin">
-              <h3>Led Zeppelin</h3>
-            </a>
-            <p class="atributo">Hard Rock</p>
-            <p class="precio">$13.990</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Led Zeppelin" data-precio="13990">Añadir</button>
-          </article>
-        </li>
-
-
-
-
-
-      </ul>
+      <ul class="grilla-productos" id="grilla-productos-categoria" data-categoria="todos"></ul>
     </section>
   </main>
 
@@ -226,7 +92,9 @@
         <button type="submit" class="boton-primario">Suscribirse</button>
       </form>
     </div>
-  </footer>
-
+  </footer>  <script src="js/productos-data.js"></script>
+  <script src="js/nav-categorias.js"></script>
+  <script src="js/listado-categoria.js"></script>
+  <script src="js/carrito.js"></script>
 </body>
 </html>

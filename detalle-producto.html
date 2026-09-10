@@ -14,7 +14,7 @@
     <div class="barra-superior">
       <nav class="nav-cuenta" aria-label="Cuenta de usuario">
         <ul>
-          <li><a href="index.html">Iniciar sesión</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
           <li><a href="registro.html">Registrar usuario</a></li>
         </ul>
       </nav>
@@ -26,7 +26,21 @@
       </a>
       <ul class="menu-principal">
         <li><a href="index.html">Home</a></li>
-        <li><a href="productos.html">Productos</a></li>
+        <li class="dropdown">
+          <a href="productos.html">Productos</a>
+          <ul class="dropdown-menu">
+            <li><a href="productos.html">Ver todos</a></li>
+            <li class="dropdown-submenu">
+              <a href="vinilos.html">Vinilos</a>
+              <ul class="dropdown-menu" id="submenu-vinilos"></ul>
+            </li>
+            <li><a href="tornamesas.html">Tornamesas</a></li>
+            <li class="dropdown-submenu">
+              <a href="instrumentos.html">Instrumentos</a>
+              <ul class="dropdown-menu" id="submenu-instrumentos"></ul>
+            </li>
+          </ul>
+        </li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -43,45 +57,34 @@
     <nav aria-label="Ruta de navegación" class="migas-pan">
       <a href="index.html">Home</a> &gt;
       <a href="productos.html">Productos</a> &gt;
-      <span>Abbey Road</span>
+      <a href="productos.html" id="miga-categoria">Categoría</a> &gt;
+      <span id="miga-producto">Abbey Road</span>
     </nav>
 
     <!-- Detalle del producto -->
     <section class="detalle-producto">
 
       <div class="detalle-imagenes">
-        <img class="imagen-principal" src="img/The_Beatles_Abbey_Road_album_cover.jpg" alt="Portada del álbum Abbey Road, vista frontal">
+        <img id="imagen-principal-producto" class="imagen-principal" src="img/The_Beatles_Abbey_Road_album_cover.jpg" alt="Portada del álbum">
 
-        <ul class="miniaturas">
-          <li><img src="img/The_Beatles_Abbey_Road_album_cover.jpg" alt="Miniatura: portada frontal de Abbey Road"></li>
-          <li><img src="img/abbeyroad-partetrasera.jpg" alt="Miniatura: contraportada de Abbey Road"></li>
-          <li><img src="img/abbeyroad-vinyl.jpg" alt="Miniatura: disco de vinilo de Abbey Road"></li>
+        <ul id="lista-miniaturas" class="miniaturas">
+          <li><img src="img/The_Beatles_Abbey_Road_album_cover.jpg" alt="Miniatura del producto"></li>
         </ul>
       </div>
 
       <div class="detalle-info">
-        <h1>Abbey Road</h1>
-        <p class="detalle-precio">$12.990</p>
+        <h1 id="nombre-producto">Abbey Road</h1>
+        <p class="detalle-marca" id="marca-producto">The Beatles</p>
+        <p class="detalle-precio" id="precio-producto">$12.990</p>
 
-        <p class="detalle-descripcion">
+        <p class="detalle-descripcion" id="descripcion-producto">
           Edición en vinilo de 180 gramos del clásico álbum de 1969. Remasterizado para conservar
           la calidez del sonido analógico original. Incluye funda interior antiestática y portada
           con acabado mate, tal como la edición original.
         </p>
 
-        <dl class="detalle-especificaciones">
-          <div>
-            <dt>Género</dt>
-            <dd>Rock clásico</dd>
-          </div>
-          <div>
-            <dt>Formato</dt>
-            <dd>LP 12" — 33 RPM</dd>
-          </div>
-          <div>
-            <dt>Estado</dt>
-            <dd>Nuevo, sellado</dd>
-          </div>
+        <dl class="detalle-especificaciones" id="lista-especificaciones">
+          <!-- Se genera dinámicamente con JS: cada categoría tiene sus propios campos -->
         </dl>
 
         <form class="form-cantidad" action="#" method="post">
@@ -94,13 +97,13 @@
             <option value="5">5</option>
           </select>
 
-          <button type="submit" class="boton-primario boton-anadir-carrito" data-producto="Abbey Road" data-precio="12990">
+          <button type="submit" class="boton-primario boton-anadir-carrito" id="boton-anadir-detalle" data-producto="Abbey Road" data-precio="12990">
             Añadir al carrito
           </button>
         </form>
 
-        <div class="spotify-embed" style="margin-top: 20px; width: 100%; max-width: 100%;">
-          <iframe style="border-radius:12px; width: 100%;" src="https://open.spotify.com/embed/album/0ETFjACtuP2ADo6LFhL6HN?utm_source=generator&theme=0" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="spotify-embed" id="contenedor-spotify" style="margin-top: 20px; width: 100%; max-width: 100%;">
+          <iframe id="iframe-spotify" style="border-radius:12px; width: 100%;" src="https://open.spotify.com/embed/album/0ETFjACtuP2ADo6LFhL6HN?utm_source=generator&theme=0" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
       </div>
@@ -110,42 +113,8 @@
     <section class="productos-destacados">
       <h2>También te puede interesar</h2>
 
-      <ul class="grilla-productos">
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-producto.html">
-              <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Kind+of+Blue" alt="Portada del álbum Kind of Blue">
-              <h3>Kind of Blue</h3>
-            </a>
-            <p class="atributo">Jazz</p>
-            <p class="precio">$14.990</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Kind of Blue">Añadir</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-producto.html">
-              <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Thriller" alt="Portada del álbum Thriller">
-              <h3>Thriller</h3>
-            </a>
-            <p class="atributo">Pop / Funk</p>
-            <p class="precio">$13.990</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Thriller">Añadir</button>
-          </article>
-        </li>
-
-        <li>
-          <article class="tarjeta-producto">
-            <a href="detalle-producto.html">
-              <img src="https://placehold.co/300x300/2B2118/F5E6D3?text=Los+Jaivas" alt="Portada del álbum de Los Jaivas">
-              <h3>Los Jaivas — Alturas</h3>
-            </a>
-            <p class="atributo">Nacional / Chileno</p>
-            <p class="precio">$12.490</p>
-            <button type="button" class="boton-primario boton-anadir" data-producto="Los Jaivas — Alturas">Añadir</button>
-          </article>
-        </li>
+      <ul class="grilla-productos" id="grilla-relacionados">
+        <!-- Se generan dinámicamente con JS -->
       </ul>
     </section>
   </main>
@@ -174,7 +143,9 @@
         <button type="submit" class="boton-primario">Suscribirse</button>
       </form>
     </div>
-  </footer>
-
+  </footer>  <script src="js/productos-data.js"></script>
+  <script src="js/nav-categorias.js"></script>
+  <script src="js/detalle-producto.js"></script>
+  <script src="js/carrito.js"></script>
 </body>
 </html>

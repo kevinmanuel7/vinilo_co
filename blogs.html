@@ -26,7 +26,21 @@
       </a>
       <ul class="menu-principal">
         <li><a href="index.html">Home</a></li>
-        <li><a href="productos.html">Productos</a></li>
+        <li class="dropdown">
+          <a href="productos.html">Productos</a>
+          <ul class="dropdown-menu">
+            <li><a href="productos.html">Ver todos</a></li>
+            <li class="dropdown-submenu">
+              <a href="vinilos.html">Vinilos</a>
+              <ul class="dropdown-menu" id="submenu-vinilos"></ul>
+            </li>
+            <li><a href="tornamesas.html">Tornamesas</a></li>
+            <li class="dropdown-submenu">
+              <a href="instrumentos.html">Instrumentos</a>
+              <ul class="dropdown-menu" id="submenu-instrumentos"></ul>
+            </li>
+          </ul>
+        </li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="blogs.html" aria-current="page">Blogs</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -94,7 +108,8 @@
         <button type="submit" class="boton-primario">Suscribirse</button>
       </form>
     </div>
-  </footer>
-
+  </footer>  <script src="js/productos-data.js"></script>
+  <script src="js/nav-categorias.js"></script>
+  <script src="js/carrito.js"></script>
 </body>
 </html>
