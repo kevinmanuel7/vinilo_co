@@ -50,7 +50,7 @@ const PRODUCTOS = [
       { label: "Formato", value: "LP 12\" — 33 RPM" },
       { label: "Estado", value: "Nuevo, sellado" },
     ],
-    spotifyId: "",
+    spotifyId: "2LliCHtp9aAlbJhSFXkKlP",
   },
   {
     id: "blizzard-of-ozz",
@@ -68,7 +68,7 @@ const PRODUCTOS = [
       { label: "Formato", value: "LP 12\" — 33 RPM" },
       { label: "Estado", value: "Nuevo, sellado" },
     ],
-    spotifyId: "",
+    spotifyId: "5FxbYXWhCbyQkUaVzj6hlo",
   },
   {
     id: "forever-young",
@@ -86,7 +86,7 @@ const PRODUCTOS = [
       { label: "Formato", value: "LP 12\" — 33 RPM" },
       { label: "Estado", value: "Nuevo, sellado" },
     ],
-    spotifyId: "",
+    spotifyId: "2256qKBSQdt53T5dz4Kdcs",
   },
   {
     id: "toto",
@@ -104,7 +104,7 @@ const PRODUCTOS = [
       { label: "Formato", value: "LP 12\" — 33 RPM" },
       { label: "Estado", value: "Nuevo, sellado" },
     ],
-    spotifyId: "",
+    spotifyId: "1mnu4hYvdwQgZXcNvtJ3D3",
   },
   {
     id: "signos",
@@ -122,7 +122,7 @@ const PRODUCTOS = [
       { label: "Formato", value: "LP 12\" — 33 RPM" },
       { label: "Estado", value: "Nuevo, sellado" },
     ],
-    spotifyId: "",
+    spotifyId: "7s2lDvm4FwnWE5RXEoY8Gi",
   },
   {
     id: "infame",
@@ -140,7 +140,7 @@ const PRODUCTOS = [
       { label: "Formato", value: "LP 12\" — 33 RPM" },
       { label: "Estado", value: "Nuevo, sellado" },
     ],
-    spotifyId: "",
+    spotifyId: "7FYLw9fTOiYnJFbFk2Mntn",
   },
   {
     id: "one-night-stand",
@@ -158,7 +158,7 @@ const PRODUCTOS = [
       { label: "Formato", value: "LP 12\" — 33 RPM" },
       { label: "Estado", value: "Nuevo, sellado" },
     ],
-    spotifyId: "",
+    spotifyId: "3nTXqOEHr6AfTb1WSaB4Pm",
   },
   {
     id: "take-ten",
@@ -176,7 +176,7 @@ const PRODUCTOS = [
       { label: "Formato", value: "LP 12\" — 33 RPM" },
       { label: "Estado", value: "Nuevo, sellado" },
     ],
-    spotifyId: "",
+    spotifyId: "5W0gCDMoQUWAL2PGxFE6Mr",
   },
   {
     id: "led-zeppelin",
@@ -194,7 +194,7 @@ const PRODUCTOS = [
       { label: "Formato", value: "LP 12\" — 33 RPM" },
       { label: "Estado", value: "Nuevo, sellado" },
     ],
-    spotifyId: "",
+    spotifyId: "1Vn6Uev9YVE2lPxtOrAqsH",
   },
 
   // ==================== TORNAMESAS ====================
@@ -206,8 +206,8 @@ const PRODUCTOS = [
     categoria: "tornamesa",
     subcategoria: "Automática",
     destacado: false,
-    imagen: "https://placehold.co/400x400/2B2118/F5E6D3?text=AT-LP60X",
-    miniaturas: ["https://placehold.co/400x400/2B2118/F5E6D3?text=AT-LP60X"],
+    imagen: "img/LP60X-BK.jpg",
+    miniaturas: ["img/LP60X-BK.jpg"],
     descripcion: "Tornamesa totalmente automática, ideal para quienes recién comienzan a coleccionar vinilos. Incluye cápsula de fábrica ya instalada.",
     especificaciones: [
       { label: "Tipo", value: "Automática" },
@@ -224,8 +224,8 @@ const PRODUCTOS = [
     categoria: "tornamesa",
     subcategoria: "Manual",
     destacado: false,
-    imagen: "https://placehold.co/400x400/8B4513/F5E6D3?text=PLX-500",
-    miniaturas: ["https://placehold.co/400x400/8B4513/F5E6D3?text=PLX-500"],
+    imagen: "img/PLX-500.jpg",
+    miniaturas: ["img/PLX-500.jpg"],
     descripcion: "Tornamesa de tracción directa de nivel profesional, pensada tanto para audiófilos como para DJs.",
     especificaciones: [
       { label: "Tipo", value: "Manual, tracción directa" },
@@ -242,8 +242,8 @@ const PRODUCTOS = [
     categoria: "tornamesa",
     subcategoria: "Automática",
     destacado: false,
-    imagen: "https://placehold.co/400x400/D2691E/F5E6D3?text=Crosley+C62",
-    miniaturas: ["https://placehold.co/400x400/D2691E/F5E6D3?text=Crosley+C62"],
+    imagen: "img/CrosleyC62.jpg",
+    miniaturas: ["img/CrosleyC62.jpg"],
     descripcion: "Tornamesa de estética vintage con parlantes incorporados, perfecta para quienes buscan un equipo todo-en-uno.",
     especificaciones: [
       { label: "Tipo", value: "Automática" },
@@ -262,8 +262,8 @@ const PRODUCTOS = [
     categoria: "instrumento",
     subcategoria: "Guitarras",
     destacado: false,
-    imagen: "https://placehold.co/400x400/2B2118/F5E6D3?text=Stratocaster",
-    miniaturas: ["https://placehold.co/400x400/2B2118/F5E6D3?text=Stratocaster"],
+    imagen: "img/statocaster.jpg",
+    miniaturas: ["img/statocaster.jpg"],
     descripcion: "Guitarra eléctrica icónica, versátil para rock, blues y funk. Cuerpo de aliso y mástil de arce.",
     especificaciones: [
       { label: "Tipo", value: "Guitarra eléctrica" },
@@ -280,8 +280,8 @@ const PRODUCTOS = [
     categoria: "instrumento",
     subcategoria: "Bajos",
     destacado: false,
-    imagen: "https://placehold.co/400x400/8B4513/F5E6D3?text=Precision+Bass",
-    miniaturas: ["https://placehold.co/400x400/8B4513/F5E6D3?text=Precision+Bass"],
+    imagen: "img/precissionbass.jpg",
+    miniaturas: ["img/precissionbass.jpg"],
     descripcion: "El bajo eléctrico que definió el sonido del bajo moderno desde los años 50.",
     especificaciones: [
       { label: "Tipo", value: "Bajo eléctrico" },
@@ -298,8 +298,8 @@ const PRODUCTOS = [
     categoria: "instrumento",
     subcategoria: "Baterías",
     destacado: false,
-    imagen: "https://placehold.co/400x400/D2691E/F5E6D3?text=Pearl+Export",
-    miniaturas: ["https://placehold.co/400x400/D2691E/F5E6D3?text=Pearl+Export"],
+    imagen: "img/exportpearl.jpg",
+    miniaturas: ["img/exportpearl.jpg"],
     descripcion: "Batería acústica de 5 piezas, ideal tanto para principiantes como para uso semi-profesional.",
     especificaciones: [
       { label: "Tipo", value: "Batería acústica, 5 piezas" },
@@ -315,8 +315,8 @@ const PRODUCTOS = [
     categoria: "instrumento",
     subcategoria: "Micrófonos",
     destacado: false,
-    imagen: "https://placehold.co/400x400/C9A961/2B2118?text=Shure+SM58",
-    miniaturas: ["https://placehold.co/400x400/C9A961/2B2118?text=Shure+SM58"],
+    imagen: "img/shuresm58.jpg",
+    miniaturas: ["img/shuresm58.jpg"],
     descripcion: "El micrófono vocal dinámico más usado del mundo en vivo, resistente y confiable.",
     especificaciones: [
       { label: "Tipo", value: "Dinámico, cardioide" },
@@ -332,8 +332,8 @@ const PRODUCTOS = [
     categoria: "instrumento",
     subcategoria: "Amplificadores",
     destacado: false,
-    imagen: "https://placehold.co/400x400/2B2118/C9A961?text=Champion+40",
-    miniaturas: ["https://placehold.co/400x400/2B2118/C9A961?text=Champion+40"],
+    imagen: "img/champion40.jpg",
+    miniaturas: ["img/champion40.jpg"],
     descripcion: "Amplificador de guitarra de 40 watts con efectos incorporados, ideal para práctica y grabación.",
     especificaciones: [
       { label: "Tipo", value: "Amplificador de guitarra" },
