@@ -4,6 +4,7 @@
 // ============================================
 
 const CLAVE_CARRITO = "vinilo-co-carrito";
+const CLAVE_CUPON = "Vinilo-co-cupon";
 
 // --------------------------------------------
 // Lectura y escritura del carrito en localStorage
@@ -64,6 +65,23 @@ function calcularTotalCarrito(carrito) {
 
 function contarItemsCarrito(carrito) {
   return carrito.reduce((total, item) => total + item.cantidad, 0);
+}
+
+// --------------------------------------------
+// Cupón aplicado (persistido igual que el carrito)
+// --------------------------------------------
+
+function obtenerCuponAplicado() {
+  const codigo = localStorage.getItem(CLAVE_CUPON);
+  return codigo ? buscarCupon(codigo) : null;
+}
+
+function guardarCupon(codigo) {
+  localStorage.setItem(CLAVE_CUPON, codigo);
+}
+
+function quitarCupon() {
+  localStorage.removeItem(CLAVE_CUPON);
 }
 
 // --------------------------------------------
@@ -144,13 +162,21 @@ function renderizarPaginaCarrito() {
 
   const carrito = obtenerCarrito();
   const elementoVacio = document.getElementById("carrito-vacio");
+  const elementoSubtotal = document.getElementById("carrito-subtotal");
+  const filaDescuento = document.getElementById("fila-descuento");
+  const elementoDescuento = document.getElementById("carrito-descuento");
+  const codigoCuponEl = document.getElementById("codigo-cupon-aplicado");
   const elementoTotal = document.getElementById("carrito-total");
+  const filaInputCupon = document.getElementById("fila-input-cupon");
+  const botonQuitarCupon = document.getElementById("boton-quitar-cupon");
   const botonPagar = document.getElementById("boton-pagar");
 
   contenedor.innerHTML = "";
 
   if (carrito.length === 0) {
     elementoVacio.style.display = "block";
+    elementoSubtotal.textContent = formatearPrecio(0);
+    filaDescuento.style.display = "none";
     elementoTotal.textContent = formatearPrecio(0);
     botonPagar.disabled = true;
     return;
@@ -183,7 +209,26 @@ function renderizarPaginaCarrito() {
     contenedor.appendChild(fila);
   });
 
-  elementoTotal.textContent = formatearPrecio(calcularTotalCarrito(carrito));
+  // Subtotal, descuento (si hay cupón aplicado) y total
+  const subtotal = calcularTotalCarrito(carrito);
+  const cupon = obtenerCuponAplicado();
+  const descuento = cupon ? calcularDescuento(cupon, subtotal) : 0;
+  const total = subtotal - descuento;
+
+  elementoSubtotal.textContent = formatearPrecio(subtotal);
+  elementoTotal.textContent = formatearPrecio(total);
+
+  if (cupon) {
+    filaDescuento.style.display = "flex";
+    codigoCuponEl.textContent = cupon.codigo;
+    elementoDescuento.textContent = "-" + formatearPrecio(descuento);
+    filaInputCupon.style.display = "none";
+    botonQuitarCupon.style.display = "inline-block";
+  } else {
+    filaDescuento.style.display = "none";
+    filaInputCupon.style.display = "flex";
+    botonQuitarCupon.style.display = "none";
+  }
 
   // Conectar los botones +/- y eliminar recién creados
   contenedor.querySelectorAll(".boton-cantidad").forEach((boton) => {
@@ -218,15 +263,44 @@ function inicializarPaginaCarrito() {
 
     alert("¡Gracias por tu compra! (Simulación: aún no hay pasarela de pago conectada).");
     vaciarCarrito();
+    quitarCupon();
     renderizarPaginaCarrito();
   });
 
   const formularioCupon = document.getElementById("form-cupon");
+  const botonQuitarCupon = document.getElementById("boton-quitar-cupon");
+  const mensajeCupon = document.getElementById("mensaje-cupon");
+
   if (formularioCupon) {
     formularioCupon.addEventListener("submit", (evento) => {
       evento.preventDefault();
-      const mensajeCupon = document.getElementById("mensaje-cupon");
-      mensajeCupon.textContent = "El cupón ingresado no es válido o ya expiró.";
+
+      const inputCupon = document.getElementById("cupon");
+      const codigoIngresado = inputCupon.value.trim();
+
+      if (!codigoIngresado) {
+        mensajeCupon.textContent = "Ingresa un código de cupón.";
+        return;
+      }
+
+      const cupon = buscarCupon(codigoIngresado);
+      if (!cupon) {
+        mensajeCupon.textContent = "El cupón ingresado no es válido o ya expiró.";
+        return;
+      }
+
+      guardarCupon(cupon.codigo);
+      mensajeCupon.textContent = "";
+      inputCupon.value = "";
+      renderizarPaginaCarrito();
+    });
+  }
+
+  if (botonQuitarCupon) {
+    botonQuitarCupon.addEventListener("click", () => {
+      quitarCupon();
+      mensajeCupon.textContent = "";
+      renderizarPaginaCarrito();
     });
   }
 }

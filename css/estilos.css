@@ -1133,6 +1133,24 @@ img {
   border-bottom: none;
 }
 
+.resumen-descuento {
+  display: none; /* se muestra vía JS solo cuando hay un cupón aplicado */
+  color: #2E7D32;
+  font-weight: 600;
+}
+
+.boton-quitar-cupon {
+  display: none; /* se muestra vía JS solo cuando hay un cupón aplicado */
+  background: none;
+  border: none;
+  color: var(--color-secundario);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+  margin-top: -0.5rem;
+}
+
 .form-cupon {
   margin: 1.2rem 0;
 }
