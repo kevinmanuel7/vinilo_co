@@ -83,6 +83,7 @@ function renderizarDetalleProducto() {
   const botonAnadir = document.getElementById("boton-anadir-detalle");
   botonAnadir.dataset.producto = producto.nombre;
   botonAnadir.dataset.precio = producto.precio;
+  botonAnadir.dataset.imagen = producto.imagen;
 
   // Spotify embed: solo para productos que traigan spotifyId (vinilos)
   const contenedorSpotify = document.getElementById("contenedor-spotify");
@@ -118,7 +119,7 @@ function renderizarRelacionados(productoActual) {
         </a>
         <p class="atributo">${producto.subcategoria}</p>
         <p class="precio">${formatearPrecioCLP(producto.precio)}</p>
-        <button type="button" class="boton-primario boton-anadir" data-producto="${producto.nombre}" data-precio="${producto.precio}">Añadir</button>
+        <button type="button" class="boton-primario boton-anadir" data-producto="${producto.nombre}" data-precio="${producto.precio}" data-imagen="${producto.imagen}">Añadir</button>
       </article>
     `;
     grilla.appendChild(li);

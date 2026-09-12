@@ -3,7 +3,7 @@
 // Registro de usuario e Inicio de sesión
 // ============================================
 
-const DOMINIOS_PERMITIDOS = ["duoc.cl", "profesor.duoc.cl", "gmail.com"];
+const DOMINIOS_PERMITIDOS = ["duoc.cl", "profesor.duoc.cl", "gmail.com", "duocuc.cl"];
 
 // --------------------------------------------
 // Utilidades para mostrar / limpiar mensajes de error
@@ -156,21 +156,23 @@ function inicializarFormularioRegistro() {
     }
   });
 
-  campoRegion.addEventListener("change", () => {
+  function validarCampoRegion() {
     if (campoRegion.value === "") {
       mostrarError("region", "error-region", "Selecciona una región.");
     } else {
       limpiarError("region", "error-region");
     }
-  });
+  }
+  campoRegion.addEventListener("change", validarCampoRegion);
 
-  campoComuna.addEventListener("change", () => {
+  function validarCampoComuna() {
     if (campoComuna.value === "") {
       mostrarError("comuna", "error-comuna", "Selecciona una comuna.");
     } else {
       limpiarError("comuna", "error-comuna");
     }
-  });
+  }
+  campoComuna.addEventListener("change", validarCampoComuna);
 
   campoDireccion.addEventListener("input", () => {
     if (campoDireccion.value.trim() === "") {
@@ -195,8 +197,8 @@ function inicializarFormularioRegistro() {
     campoCorreo.dispatchEvent(new Event("input"));
     campoContrasena.dispatchEvent(new Event("input"));
     campoConfirmar.dispatchEvent(new Event("input"));
-    campoRegion.dispatchEvent(new Event("change"));
-    campoComuna.dispatchEvent(new Event("change"));
+    validarCampoRegion();
+    validarCampoComuna();
     campoDireccion.dispatchEvent(new Event("input"));
 
     const hayErrores = formulario.querySelectorAll(".mensaje-error:not(:empty)").length > 0;

@@ -76,7 +76,7 @@ function inicializarListadoCategoria() {
           <p class="marca-producto">${producto.marca}</p>
           <p class="atributo">${producto.subcategoria}</p>
           <p class="precio">${formatearPrecioCLP(producto.precio)}</p>
-          <button type="button" class="boton-primario boton-anadir" data-producto="${producto.nombre}" data-precio="${producto.precio}">Añadir</button>
+          <button type="button" class="boton-primario boton-anadir" data-producto="${producto.nombre}" data-precio="${producto.precio}" data-imagen="${producto.imagen}">Añadir</button>
         </article>
       `;
       grilla.appendChild(li);

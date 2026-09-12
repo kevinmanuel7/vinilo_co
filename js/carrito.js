@@ -4,7 +4,7 @@
 // ============================================
 
 const CLAVE_CARRITO = "vinilo-co-carrito";
-const CLAVE_CUPON = "Vinilo-co-cupon";
+const CLAVE_CUPON = "vinilo-co-cupon";
 
 // --------------------------------------------
 // Lectura y escritura del carrito en localStorage
@@ -30,6 +30,10 @@ function agregarProductoAlCarrito(nombre, precio, cantidad = 1, imagen = "") {
 
   if (existente) {
     existente.cantidad += cantidad;
+    // Autocorrige productos guardados antes de este arreglo (sin imagen)
+    if (!existente.imagen && imagen) {
+      existente.imagen = imagen;
+    }
   } else {
     carrito.push({ nombre, precio, cantidad, imagen });
   }
@@ -118,8 +122,9 @@ function inicializarBotonesAnadir() {
     boton.addEventListener("click", () => {
       const nombre = boton.dataset.producto;
       const precio = parseInt(boton.dataset.precio, 10) || 0;
+      const imagen = boton.dataset.imagen || "";
 
-      agregarProductoAlCarrito(nombre, precio, 1);
+      agregarProductoAlCarrito(nombre, precio, 1, imagen);
       mostrarConfirmacionAnadido(boton);
     });
   });
@@ -131,10 +136,11 @@ function inicializarBotonesAnadir() {
       evento.preventDefault();
       const nombre = botonDetalle.dataset.producto;
       const precio = parseInt(botonDetalle.dataset.precio, 10) || 0;
+      const imagen = botonDetalle.dataset.imagen || "";
       const selectCantidad = document.getElementById("cantidad");
       const cantidad = selectCantidad ? parseInt(selectCantidad.value, 10) : 1;
 
-      agregarProductoAlCarrito(nombre, precio, cantidad);
+      agregarProductoAlCarrito(nombre, precio, cantidad, imagen);
       mostrarConfirmacionAnadido(botonDetalle);
     });
   }
